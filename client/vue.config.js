@@ -35,6 +35,15 @@ const buildConfig = {
         options.customElement = true;
         return options;
       });
+
+    config.module
+      .rule("images")
+      .test(/\.(png|jpg|jpeg|gif|svg)(\?.*)?$/)
+      .set("parser", {
+        dataUrlCondition: {
+          maxSize: 100 * 1024,
+        },
+      });
   },
 };
 
