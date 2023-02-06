@@ -15,7 +15,6 @@ const getRootElement = (el) => {
 };
 export const defineCustomElementWithStyles = (component) =>
   VueDefineCustomElement({
-    // props: component.props,
     setup() {
       const app = createApp();
 
