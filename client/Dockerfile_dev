@@ -1,0 +1,14 @@
+FROM node:18
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm config set unsafe-perm true
+
+RUN yarn install
+
+COPY . .
+RUN chown -R node:node ./node_modules 
+
+CMD [ -d "node_modules" ] && npm run serve || npm ci && npm run serve

@@ -1,0 +1,13 @@
+git pull;
+
+cd client;
+# build new container for build vue app
+docker build -f Dockerfile -t plumsail_build_client .;
+# run container
+docker run --name PlumsailBuildClient -itd plumsail_build_client;
+# copy from container's dist folder to local dist foler
+docker cp PlumsailBuildClient:/app/dist .
+# remove container after using;
+docker container rm -f PlumsailBuildClient;
+# remove image after using;
+docker rmi -f plumsail_build_client;
