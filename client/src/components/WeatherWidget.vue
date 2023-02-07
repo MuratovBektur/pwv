@@ -104,6 +104,7 @@ function onHideSettingComponent() {
 <style lang="scss">
 $maxWidth: 210px;
 .weather-widget {
+  padding: 0.5em;
   max-width: $maxWidth;
   width: 100%;
   display: inline-flex;

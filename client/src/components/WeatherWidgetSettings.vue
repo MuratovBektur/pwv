@@ -162,6 +162,10 @@ function removeCity(city: ICity) {
     align-items: center;
   }
   &__close-btn {
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     & > img {
       width: 2em;
     }

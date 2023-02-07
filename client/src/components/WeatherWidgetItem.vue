@@ -108,6 +108,9 @@ const direction = computed(() => getCardinalDirectionByDegree(windDeg.value));
     align-items: center;
   }
   &__gear-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     & > img {
       width: 1.5em;
     }
