@@ -8,7 +8,7 @@
         'weather-widget__settings_hide': !showSettingComponent,
       }"
     />
-    <div>
+    <div class="weather-widget__weather-list">
       <div
         v-for="(weatherByCity, idx) of weatherByCityList"
         :key="`${weatherByCity.coord.lat}_${weatherByCity.coord.lon}`"
@@ -102,7 +102,7 @@ function onHideSettingComponent() {
 </script>
 
 <style lang="scss">
-$maxWidth: 230px;
+$maxWidth: 210px;
 .weather-widget {
   max-width: $maxWidth;
   width: 100%;
@@ -119,6 +119,9 @@ $maxWidth: 230px;
       transform: translateX(0);
       opacity: 1;
     }
+  }
+  &__weather-list {
+    width: 100%;
   }
 }
 

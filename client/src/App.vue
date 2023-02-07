@@ -21,6 +21,10 @@ envStore.setState(weatherServiceApiKey, weatherUpdateIntervalInMinutes);
 </script>
 
 <style>
+* {
+  padding: 0;
+  margin: 0;
+}
 button {
   background-color: transparent;
   border: none;

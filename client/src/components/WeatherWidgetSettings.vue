@@ -162,7 +162,6 @@ function removeCity(city: ICity) {
     align-items: center;
   }
   &__close-btn {
-    margin-right: 0.7em;
     & > img {
       width: 2em;
     }
