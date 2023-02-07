@@ -152,7 +152,7 @@ function removeCity(city: ICity) {
 
 <style scoped lang="scss">
 .weather-widget-settings {
-  width: 96%;
+  width: 100%;
   min-height: 100%;
   font-size: 15px;
   font-weight: 500;
