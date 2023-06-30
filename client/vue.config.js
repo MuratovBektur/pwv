@@ -10,7 +10,7 @@ const devConfig = {
   ...commonConfig,
   chainWebpack: (config) => {
     config.plugin("html").tap((args) => {
-      args[0].template = "./public/index_dev.html";
+      args[0].template = "./public_dev/index.html";
       return args;
     });
   },

@@ -46,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineProps, PropType } from "vue";
+import { computed, defineProps, PropType, toRefs } from "vue";
 import { IWeatherByCity } from "@/helper/types";
 import getCardinalDirectionByDegree from "@/helper/getCardinalDirectionByDegree";
 import { capitalize } from "lodash";
@@ -64,8 +64,7 @@ const props = defineProps({
   },
 });
 
-const weatherByCity = computed(() => props.weatherByCity);
-const canShowSetting = computed(() => props.canShowSetting);
+const { weatherByCity, canShowSetting } = toRefs(props);
 
 const title = `${weatherByCity.value.name}, ${weatherByCity.value.sys.country}`;
 
